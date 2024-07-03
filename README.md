@@ -1,27 +1,47 @@
-# crystow
+# CryStow
 
-TODO: Write a description here
+CryStow (Crystal-like stow) is a tool designed to manage your dotfiles easily, inspired by the simplicity of Crystal.
 
 ## Installation
 
-TODO: Write installation instructions here
+Clone the repository and build the project using:
+
+```bash
+crystal build src/crystow.cr
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Run `crystow` with the required options:
 
-## Development
+```bash
+crystal run src/crystow.cr -- -a ~/.config/i3 -d ~/dotfiles/i3 --simulate --verbose
+```
 
-TODO: Write development instructions here
+### Options
+
+- `-v, --version`: Show the version of CryStow.
+- `-s, --simulate`: Simulate the operation without making any changes to the files.
+- `--verbose`: Enable verbose output to see more detailed logs.
+- `-f, --force`: Force overwrite existing files without asking.
+- `-a APP, --app=APP`: Specify the application configuration path you want to manage.
+- `-d DEST, --dest=DEST`: Specify the destination path where the dotfiles should be stored.
+- `-h, --help`: Display help information.
+
+## Example
+
+To simulate the management of i3 config files without actually copying them:
+
+```bash
+./crystow -a ~/.config/i3 -d ~/dotfiles/i3 --simulate --verbose
+```
+
+This command will show what changes would be made if the command were executed without the `--simulate` flag.
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/crystow/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Contributions are welcome! Please fork the repository and submit a pull request with your features or fixes.
 
-## Contributors
+## License
 
-- [Justin](https://github.com/your-github-user) - creator and maintainer
+Distributed under the MIT License. See `LICENSE` for more information.
