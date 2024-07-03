@@ -1,0 +1,13 @@
+name: crystow
+version: 0.1.0
+
+authors:
+  - Justin <9146678+brickfrog@users.noreply.github.com>
+
+targets:
+  crystow:
+    main: src/crystow.cr
+
+crystal: '>= 1.12.2'
+
+license: MIT
